@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue.js</title>
+</head>
+
+<body>
+  <!-- DIV que será o container da aplicação vue -->
+  <div id="app">
+    {{message}}
+  </div>
+
+  <!-- <script src="https:unpkg.com/vue/dist/vue.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <script>
+    /* Variável "app": só para guardar a instância do vue */
+    var app = new Vue({
+      el: '#app',
+      data: { //Objeto literal "data": Todos os dados que a view irá consumir
+          message: 'Hello Word!'
+      },
+      created: function() {
+        console.log('starting app')
+      },
+      beforeCreate: function() {
+        
+      }
+    })
+
+    /* Ciclos de vida:
+       beforeCreate -> created -> beforeMount ->
+       mounted -> beforeUpdate -> updated ->
+       beforeDestroy -> destroyed */
+  </script>
+</body>
+
+</html>
