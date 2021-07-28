@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue.js</title>
+</head>
+
+<!-- Ciclos de vida:
+     beforeCreate -> created -> beforeMount ->
+     mounted -> beforeUpdate -> updated ->
+     beforeDestroy -> destroyed  -->
+<!-- {{ }} Double mustache -->
+<!-- Diretiva v-bind: Expressões e atributos. Realizando o bind em atributos de tags HTML -->
+<!-- (:) Síntaxe enxuta. Só os dois pontos -->
+<!-- Diretivas v-if, v-else, v-if-else, v-show: Condições -->
+<!-- Diretiva v-for: loopings -->
+<!-- Atributo key: É sempre recomendado com v-for, para exclusividade, cada item tem que ser único -->
+<!-- diretiva v-html: Para que o vue interprete como um elemento html a ser renderizado pelo navegador -->
+
+<body>
+  <!-- DIV que será o container da aplicação vue -->
+  <div id="app">
+     {{ 'luiz' }} <!-- Para imprimir o texto, tem que ser entre aspas, senão pensa que é uma variável -->
+     {{myHTML}} <!-- Assim té errado, vai simplesmente imprimir como um texto, cfe. variável abaixo. -->
+     <div v-html="myHTML">  <!-- Correto, utilizando a diretiva v-html -->
+
+     </div>
+  </div>
+
+  <!-- <script src="https:unpkg.com/vue/dist/vue.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+  <script>
+    /* Variável "app": só para guardar a instância do vue */
+    var app = new Vue({
+      el: '#app',
+      data: { //Objeto literal "data": Todos os dados que a view irá consumir
+        myHTML: '<input type="text" />'
+      }
+     
+    })
+  
+  </script>
+</body>
+
+</html>
