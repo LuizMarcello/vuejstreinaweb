@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue.js</title>
+</head>
+
+<!-- Ciclos de vida:
+     beforeCreate -> created -> beforeMount ->
+     mounted -> beforeUpdate -> updated ->
+     beforeDestroy -> destroyed  -->
+<!-- {{ }} Double mustache -->
+<!-- Diretiva v-bind: Expressões e atributos. Realizando o bind em atributos de tags HTML -->
+<!-- (:) Síntaxe enxuta. Só os dois pontos -->
+<!-- Diretivas v-if, v-else, v-if-else, v-show: Condições -->
+
+<body>
+  <!-- DIV que será o container da aplicação vue -->
+  <div id="app">
+      <!-- <span v-if="isVisible">Treinaweb</span> <br> --> <!-- v-if: Nem renderiza na DOM -->
+      <!-- <span v-show="isVisible">Treinaweb</span> -->  <!-- v-show: Apenas desliga a propriedade css display -->
+      <!-- <span v-if="isVisible">É verdadeiro</span> -->
+      <!-- <span v-else="isVisible">È falso</span> -->
+      <span v-if="1 > 3">A</span>
+      <span v-else-if="3 < 1">B</span>
+      <span v-else>C</span>
+  </div>
+
+  <!-- <script src="https:unpkg.com/vue/dist/vue.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+  <script>
+    /* Variável "app": só para guardar a instância do vue */
+    var app = new Vue({
+      el: '#app',
+      data: { //Objeto literal "data": Todos os dados que a view irá consumir
+          isVisible: false
+      }
+     
+    })
+  
+  </script>
+</body>
+
+</html>

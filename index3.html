@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue.js</title>
+</head>
+
+<!-- Ciclos de vida:
+     beforeCreate -> created -> beforeMount ->
+     mounted -> beforeUpdate -> updated ->
+     beforeDestroy -> destroyed  -->
+<!-- {{ }} Double mustache -->
+<!-- Diretiva v-bind: Expressões e atributos. Realizando o bind em atributos de tags HTML -->
+<!-- (:) Síntaxe enxuta. Só os dois pontos -->
+<!-- Diretivas v-if, v-else, v-if-else, v-show: Condições -->
+<!-- Diretiva v-for: loopings -->
+<!-- Atributo key: É sempre recomendado com v-for, para exclusividade, cada item tem que ser único -->
+
+<body>
+  <!-- DIV que será o container da aplicação vue -->
+  <div id="app">
+     <ul>
+       <li v-for="(item, index) in list" :key="index">
+         {{index}}  - {{ item.text }}
+       </li>
+     </ul> <br>
+     <ul>
+      <li v-for="number in 7">
+        {{ number }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- <script src="https:unpkg.com/vue/dist/vue.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+  <script>
+    /* Variável "app": só para guardar a instância do vue */
+    var app = new Vue({
+      el: '#app',
+      data: { //Objeto literal "data": Todos os dados que a view irá consumir
+         list: [
+           {text: 'item 1'},
+           {text: 'item 2'},
+           {text: 'item 1'}
+         ]
+      }
+     
+    })
+  
+  </script>
+</body>
+
+</html>

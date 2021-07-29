@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<<<<<<< HEAD
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +27,33 @@
             }
         })
     </script>
+=======
+  <meta charset="UTF-8">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+  <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <title>PokéDex</title>
+
+</head>
+
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="n in 10" v-if="n % 2 === 0">
+        5 x {{ n }} = {{ 5 * n }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- <script src="https:unpkg.com/vue/dist/vue.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+  <script>
+    var app = new Vue({
+      el: '#app'
+    })
+  </script>
+
+>>>>>>> fa1cad4dad4199e2cb7b2554d6e103041c62f476
 </body>
 
 </html>
