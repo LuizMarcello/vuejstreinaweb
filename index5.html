@@ -9,6 +9,19 @@
 
 </head>
 
+<!-- Ciclos de vida:
+     beforeCreate -> created -> beforeMount ->
+     mounted -> beforeUpdate -> updated ->
+     beforeDestroy -> destroyed  -->
+<!-- {{ }} Double mustache -->
+<!-- Diretiva v-bind: Expressões e atributos. Realizando o bind em atributos de tags HTML -->
+<!-- (:) Síntaxe enxuta. Só os dois pontos -->
+<!-- Diretivas v-if, v-else, v-if-else, v-show: Condições -->
+<!-- Diretiva v-for: loopings -->
+<!-- Atributo key: É sempre recomendado com v-for, para exclusividade, cada item tem que ser único -->
+<!-- diretiva v-html: Para que o vue interprete como um elemento html a ser renderizado pelo navegador -->
+
+
 <body>
   <div id="app">
     <ul>
@@ -23,7 +36,9 @@
 
   <script>
     var app = new Vue({
-      el: '#app'
+      el: '#app',
+      data: {}
+
     })
   </script>
 
