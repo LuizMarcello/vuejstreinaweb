@@ -2,6 +2,32 @@
 <html lang="en">
 
 <head>
+<<<<<<< HEAD
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js</title>
+</head>
+
+<body>
+    <!-- DIV que será o container da aplicação vue -->
+    <div id="app">
+        {{message}} <br> {{message2}}
+    </div>
+
+    <!-- <script src="https:unpkg.com/vue/dist/vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script>
+        /* Variável "app": só para guardar a instância do vue */
+        var app = new Vue({
+            el: '#app',
+            data: { //Objeto literal "data": Todos os dados que a view irá consumir
+                message: 'Hello Word!',
+                message2: 'Hello Word2!'
+            }
+        })
+    </script>
+=======
   <meta charset="UTF-8">
   <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
   <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
@@ -68,6 +94,7 @@
     
   </script>
 
+>>>>>>> fa1cad4dad4199e2cb7b2554d6e103041c62f476
 </body>
 
 </html>
